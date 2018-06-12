@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>plane-xy.jpg</file>
+        <file>plane-yz.jpg</file>
+        <file>plane-zx.jpg</file>
+        <file>z-rotation.jpg</file>
+        <file>y-rotation.jpg</file>
+        <file>x-rotation.jpg</file>
+        <file>plane-xy-proj.jpg</file>
+        <file>plane-yz-proj.jpg</file>
+        <file>plane-zx-proj.jpg</file>
+        <file>x_left.jpg</file>
+        <file>x_right.jpg</file>
+        <file>y_left.jpg</file>
+        <file>y_right.jpg</file>
+        <file>z_left.jpg</file>
+        <file>z_right.jpg</file>
+    </qresource>
+</RCC>
