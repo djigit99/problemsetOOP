@@ -28,15 +28,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     timer.cpp \
-    timeritem.cpp
+    timeritem.cpp \
+    settingsdialog.cpp
 
 HEADERS += \
         mainwindow.h \
     timer.h \
-    timeritem.h
+    timeritem.h \
+    settingsdialog.h
 
-FORMS += \
-        mainwindow.ui
+FORMS +=
 
 RESOURCES += \
     icons.qrc

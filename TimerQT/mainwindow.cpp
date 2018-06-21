@@ -8,34 +8,24 @@
 #include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow) {
-
-    ui->setupUi(this);
+    QMainWindow(parent) {
 
     setWindowTitle(QString("TimerWow"));
-    // QListWidget;
-    // QListWidgetItem
-    // QWidget
-    // QLabel QPushButton
-    // QHBoxLayout
-    // QHBoxLayout add QLabel , add QPushButton
-    // QWidget setLayout QHBoxLayout
-    // QListWidget add QListWidgetItem
-    // QListWidget setItemWidget(QListWidgetItem, QWidget)
 
     QListWidget* listWidget = new QListWidget(this);
-    QListWidgetItem* listWidgetItem = new QListWidgetItem();
+    QListWidgetItem* listWidgetItem  = new QListWidgetItem();
     TimerItem* timerItem = new TimerItem(this);
 
     listWidgetItem->setSizeHint(timerItem->sizeHint());
+    setFixedWidth(timerItem->sizeHint().width() + 15);
     listWidget->addItem(listWidgetItem);
     listWidget->setItemWidget(listWidgetItem, timerItem);
 
     setCentralWidget(listWidget);
+
 }
 
 MainWindow::~MainWindow() {
-    delete ui;
+
 }
 

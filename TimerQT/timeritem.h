@@ -13,9 +13,11 @@
 #include <QSound>
 #include <QMediaPlayer>
 #include <QMovie>
+#include <QTimer>
 
-class TimerItem : public QWidget
-{
+#include "settingsdialog.h"
+
+class TimerItem : public QWidget {
     Q_OBJECT
 public:
     explicit TimerItem(QWidget *parent = nullptr);
@@ -23,10 +25,12 @@ public:
 
 private:
     Timer* timer;
+    QTimer* qtimer;
     QString soundPath;
     QSound* sound;
     QMediaPlayer* mediaPlayer;
     QMovie* movie;
+    QLabel* movieLabel;
 
     QHBoxLayout* layout;
     QLabel* itemNumberLabel;
@@ -34,14 +38,23 @@ private:
     QPushButton* soundPushButton;
     QLineEdit* timeLineEdit;
     QRegExpValidator* regExpValidator;
+    QPushButton* settingsButton;
     QPushButton* playButton;
+    QPushButton* pauseButton;
+
+    SettingsDialog* sDialog;
 
 signals:
+    void timeOut();
 
 public slots:
-    void soundOn();
-    void soundOff();
+    void animationOn();
+    void animationOff();
     void chooseFile();
+    void decTime();
+    void timerStarted();
+    void timerPaused();
+    void changeTimeData();
 };
 
 #endif // TIMERITEM_H

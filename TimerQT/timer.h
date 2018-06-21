@@ -1,17 +1,15 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include <QSound>
-#include <QTimer>
 #include <QWidget>
 
 typedef unsigned short _us;
 
-class Timer : public QWidget {
+class Timer {
 
 public:
-    Timer(QWidget *parent = nullptr);
-    Timer(_us hours, _us minutes, _us seconds, QWidget *parent = nullptr);
+    Timer();
+    Timer(_us hours, _us minutes, _us seconds);
 
     // setters
     void setHours(_us hours);
@@ -23,13 +21,13 @@ public:
     _us getMinutes();
     _us getSeconds();
 
+    bool timeIsOut();
+    void decTime();
+
 private:
     _us hours;
     _us minutes;
     _us seconds;
-
-    QTimer* timer;
-
 };
 
 #endif // TIMER_H

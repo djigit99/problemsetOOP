@@ -1,11 +1,14 @@
 <RCC>
     <qresource prefix="/playButton">
         <file>play.png</file>
-        <file>stop.png</file>
+        <file>pause.png</file>
     </qresource>
     <qresource prefix="/alarm">
         <file>alarm.png</file>
         <file>ring.mp3</file>
         <file>giphy.gif</file>
+    </qresource>
+    <qresource prefix="/settings">
+        <file>settings.png</file>
     </qresource>
 </RCC>
